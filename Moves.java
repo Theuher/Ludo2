@@ -116,10 +116,6 @@ public class Moves extends JPanel implements IMoves, KeyListener {
         }
     }
 
-    @Override
-    public void keyReleased(KeyEvent e) {
-
-    }
 
     public void mouseClicked(MouseEvent e) {
         if(flag==1) {
@@ -212,6 +208,20 @@ public class Moves extends JPanel implements IMoves, KeyListener {
             repaint();
         }
     }
+
+
+
+
+
+
+
+
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
+
 
     @Override
     public void mousePressed(MouseEvent e) {

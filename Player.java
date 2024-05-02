@@ -1,7 +1,7 @@
 import java.awt.Graphics2D;
 
 public class Player implements IPlayer {
-    int height,width,status,coin;
+    int status,coin;
     Pawn[] pa=new Pawn[4];
     public Player(int height,int width) {
         status=-1;

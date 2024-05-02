@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Opt {
@@ -11,7 +11,7 @@ public class Opt {
     static twoPlayerScreen ts = new twoPlayerScreen();
     static fourPlayerScreen fs = new fourPlayerScreen();
     static Introduction intro = new Introduction();
-
+    BufferedImage img;
     public void screen() {
         JFrame frame = new JFrame();
         frame.setBounds(100, 100, 1000, 700);
@@ -20,11 +20,13 @@ public class Opt {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel() {
+//            "image\\ludo4.jpg"
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 try {
-                    Image backgroundImage = ImageIO.read(new File("C:\\Users\\Dell\\OneDrive\\Documents\\Ludo2\\image\\ludo4.jpg"));
+                    img = ImageIO.read(Opt.class.getResource("/image/ludo4.jpg"));
+                    Image backgroundImage = img;
                     g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
                 } catch (IOException e) {
                     e.printStackTrace();
