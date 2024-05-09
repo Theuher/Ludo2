@@ -1,16 +1,15 @@
+package Frontend;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
+import Frontend.Interface.ILayout;
+
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
-import java.util.Map;
 
-public class Layout implements ILayout{
+public class Layout implements ILayout {
 
-    int x,y,width,height;
+    int x;
+    int y;
+    public int width;
+    public int height;
     public Layout(int xi,int yi) {
         x=xi;
         y=yi;

@@ -1,7 +1,6 @@
+package Frontend;
+
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class fourPlayerScreen {
     public void Screen() {
@@ -12,7 +11,7 @@ public class fourPlayerScreen {
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        Moves gm = new Moves();
+        Action gm = new Action();
         gm.setFocusable(true);
         gm.addKeyListener(gm);
         gm.addMouseListener(gm);

@@ -1,12 +1,18 @@
+package Frontend;
+
+import Frontend.Interface.ILayout;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 
-public class twoPlayerLayout implements ILayout{
+public class twoPlayerLayout implements ILayout {
 
-    int x,y,width,height;
+    int x;
+    int y;
+    public int width;
+    public int height;
     public twoPlayerLayout(int xi, int yi) {
         x=xi;
         y=yi;

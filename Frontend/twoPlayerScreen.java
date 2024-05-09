@@ -1,3 +1,5 @@
+package Frontend;
+
 import javax.swing.*;
 
 public class twoPlayerScreen {
@@ -9,7 +11,7 @@ public class twoPlayerScreen {
         mframe.setResizable(false);
         mframe.add(jMenuBar);
         mframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        twoPlayerMoves tm = new twoPlayerMoves();
+        twoPlayerAction tm = new twoPlayerAction();
         tm.setFocusable(true);
         tm.addKeyListener(tm);
         tm.addMouseListener(tm);

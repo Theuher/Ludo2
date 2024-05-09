@@ -1,3 +1,5 @@
+package Backend.Interface;
+
 import java.awt.*;
 
 public interface IinitiliazePlayer {

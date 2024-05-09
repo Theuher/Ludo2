@@ -1,8 +1,13 @@
-import java.awt.*;
+package Frontend;
 
-public class Pawn implements IPawn{
-    int x,y;
-    int current;
+import java.awt.*;
+import Backend.Path;
+import Frontend.Interface.IPawn;
+
+public class Pawn implements IPawn {
+    public int x;
+    public int y;
+    public int current;
     int height,width;
     public Pawn(int h,int w){
         current=-1;
@@ -11,6 +16,7 @@ public class Pawn implements IPawn{
         height=h;
         width=w;
     }
+    Path path = new Path();
     @Override
     public void draw(Graphics2D g, int i, int j, int play) {
         if(current==-1) {
@@ -36,7 +42,7 @@ public class Pawn implements IPawn{
         }
         else {
             int temp1 = 80, temp2 = 50;
-            x = Path.ax[play][current];
+            x = path.ax[play][current];
             y = Path.ay[play][current];
             if (play == 0) {
                 g.setColor(Color.RED);

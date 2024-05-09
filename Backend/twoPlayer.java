@@ -1,8 +1,16 @@
+package Backend;
+
+import Backend.Interface.IPlayer;
+import Frontend.Pawn;
+
 import java.awt.Graphics2D;
 
 public class twoPlayer implements IPlayer {
-    int height,width,status,coin;
-    Pawn[] pa=new Pawn[4];
+    int height;
+    int width;
+    int status;
+    public int coin;
+    public Pawn[] pa=new Pawn[4];
     public twoPlayer(int height,int width) {
         status=-1;
         coin=0;

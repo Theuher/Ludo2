@@ -1,3 +1,5 @@
+package Frontend;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -20,7 +22,6 @@ public class Opt {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel() {
-//            "image\\ludo4.jpg"
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);

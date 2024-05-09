@@ -1,10 +1,11 @@
+package Frontend;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 public class Introduction {
@@ -23,7 +24,7 @@ public class Introduction {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 try {
-                    img = ImageIO.read(Opt.class.getResource("/image/introduction.jpg"));
+                    img = ImageIO.read(Opt.class.getResource("/image/intro.png"));
                     Image backgroundImage = img;
                     g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
                 } catch (IOException e) {

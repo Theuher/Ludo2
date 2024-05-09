@@ -1,3 +1,10 @@
+package Frontend;
+
+import Backend.Dice;
+import Backend.InitiliazeTwoPlayer;
+import Backend.Path;
+import Frontend.Interface.IAction;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -11,17 +18,18 @@ import java.awt.event.MouseListener;
 
 import javax.swing.*;
 
-public class twoPlayerMoves extends JPanel implements KeyListener, ActionListener,MouseListener,IMoves{
+public class twoPlayerAction extends JPanel implements KeyListener, ActionListener,MouseListener, IAction {
 
 
 //    private static final long serialVersionUID = 1L;
     twoPlayerLayout la;
     InitiliazeTwoPlayer p;
     Timer time;
+    Dice dc = new Dice();
     int delay=10;
     int current_player,dice;
     int flag=0,roll,kill=0;
-    public twoPlayerMoves() {
+    public twoPlayerAction() {
         setFocusTraversalKeysEnabled(false);
         requestFocus();
         current_player=0;
@@ -97,7 +105,7 @@ public class twoPlayerMoves extends JPanel implements KeyListener, ActionListene
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_ENTER&&flag==0) {
             roll=0;
-            dice=1 + (int)(Math.random() * 6);
+            dice=dc.rollDice();
             repaint();
             for(int i=0;i<4;i++) {
                 if(p.pl[current_player].pa[i].current!=-1&&p.pl[current_player].pa[i].current!=56&&(p.pl[current_player].pa[i].current+dice)<=56) {
@@ -159,7 +167,7 @@ public class twoPlayerMoves extends JPanel implements KeyListener, ActionListene
                         for(int i=0;i<2;i++) {
                             if(i!=current_player) {
                                 for(int j=0;j<4;j++) {
-                                    int tem1=Path.ax[current_player][p.pl[current_player].pa[value].current],tem2=Path.ay[current_player][p.pl[current_player].pa[value].current];
+                                    int tem1= Path.ax[current_player][p.pl[current_player].pa[value].current],tem2=Path.ay[current_player][p.pl[current_player].pa[value].current];
                                     if(p.pl[i].pa[j].x==tem1&&p.pl[i].pa[j].y==tem2) {
                                         p.pl[i].pa[j].current=-1;
                                         kill=1;

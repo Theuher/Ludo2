@@ -1,8 +1,12 @@
+package Backend;
+
+import Backend.Interface.IinitiliazePlayer;
+
 import java.awt.Graphics2D;
 
-public class InitiliazePlayer implements IinitiliazePlayer{
+public class InitiliazePlayer implements IinitiliazePlayer {
 
-    Player[] pl=new Player[4];
+    public Player[] pl=new Player[4];
     int[][] initialx= {
             {1,1,3,3},
             {10,10,12,12},
